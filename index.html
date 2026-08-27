@@ -1,0 +1,218 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payalu Ji Friendship</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #6c3df4;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #6c3df4, #9b6cff);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #6c3df4;
+      padding: 13px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    .section {
+      padding: 50px 7%;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .friends {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #e8ddff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+      margin: 0 auto 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    .add-btn {
+      background: #6c3df4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #17132a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">💜 Payalu Ji</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#friends">Friends</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Make New Friends 🤝</h1>
+    <p>Connect, chat and build beautiful friendships.</p>
+    <button class="btn" onclick="findFriends()">Find Friends</button>
+  </section>
+
+  <section class="section" id="friends">
+    <h2>Popular Friends</h2>
+
+    <div class="friends">
+
+      <div class="card">
+        <div class="avatar">👨</div>
+        <h3>Rahul</h3>
+        <p>Delhi • Music Lover</p>
+        <button class="add-btn" onclick="addFriend(this)">Add Friend</button>
+      </div>
+
+      <div class="card">
+        <div class="avatar">👩</div>
+        <h3>Priya</h3>
+        <p>Mumbai • Travel Lover</p>
+        <button class="add-btn" onclick="addFriend(this)">Add Friend</button>
+      </div>
+
+      <div class="card">
+        <div class="avatar">👨</div>
+        <h3>Aman</h3>
+        <p>Jaipur • Cricket Fan</p>
+        <button class="add-btn" onclick="addFriend(this)">Add Friend</button>
+      </div>
+
+      <div class="card">
+        <div class="avatar">👩</div>
+        <h3>Neha</h3>
+        <p>Pune • Photography</p>
+        <button class="add-btn" onclick="addFriend(this)">Add Friend</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Payalu Ji Friendship • Made with ❤️</p>
+  </footer>
+
+  <script>
+    function addFriend(button) {
+      button.innerText = "Request Sent ✓";
+      button.disabled = true;
+    }
+
+    function findFriends() {
+      document.getElementById("friends").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+</body>
+</html>
+```
